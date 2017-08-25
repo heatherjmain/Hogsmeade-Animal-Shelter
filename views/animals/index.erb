@@ -1,0 +1,21 @@
+<h1>Animals</h1>
+
+
+<% for animal in @animals %>
+
+  <div class="index">
+    <a href="/animals/<%= animal.id %>"><%= animal.name %></a>
+  </div>
+
+<% end %>
+
+<br>
+<br>
+
+
+<!-- Button to add new animal -->
+<form class="add-animal" action="animals/new" method="GET">
+
+  <input type="submit" value="Register a new animal">
+
+</form>
