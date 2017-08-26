@@ -1,0 +1,39 @@
+<h1>Update animal details</h1>
+
+<form class="add-animal" action="/animals/<%= @animal.id %>" method="POST">
+
+  <label for="photo-field">Photo:</label>
+  <input type="file" name="photo" id="photo-field" value="<%= @animal.photo %>" />
+
+  <label for="name-field">Name:</label>
+  <input type="text" name="name" id="name_field" value="<%= @animal.name %>" />
+
+  <label for="age-field">Age:</label>
+  <input type="text" name="age" id="age-field" value="<%= @animal.age %>" />
+
+  <label for="species-field">Species:</label>
+  <input type="text" name="species" id="species-field" value="<%= @animal.species %>" />
+
+  <label for="admission_date-field">Admission date:</label>
+  <input type="date" name="admission_date" id="admission_date-field" value="<%= @animal.admission_date %>" />
+
+  <label for="is_adoptable-select">Status of animal:</label>
+  <select id="is_adoptable-select" name="is_adoptable">
+    <option <%= "selected" if @animal.is_adoptable == "Health Check in prgress" %> value="Health Check in prgress">Health Check in prgress</option>
+
+    <option <%= "selected" if @animal.is_adoptable == "In training" %> value="In training">In training</option>
+
+    <option <%= "selected" if @animal.is_adoptable == "Available for Adoptiong" %> value="Available for Adoption">Available for Adoption</option>
+
+    <option <%= "selected" if @animal.is_adoptable == "Other" %> value="Other">Other</option>
+  </select>
+
+  <label for="adopter_id-field">Adopted by:</label>
+  <input type="text" name="adopter_id" id="adopter_id-field" value="<%= @animal.adopter_id %>" />
+
+  <label for="adoption_date-field">Adoption date:</label>
+  <input type="date" id="adoption_date-field" value="<%= @animal.adoption_date %>" />
+
+  <input type="submit" id="add-animal" value="Update details" />
+
+</form>

@@ -26,3 +26,23 @@ post "/animals" do
   @animal.save()
   redirect to ("/animals")
 end
+
+#EDIT
+get "/animals/:id/edit" do
+  @animal = Animal.find(params["id"])
+  erb(:"animals/edit")
+end
+
+#UPDATE
+post "/animals/:id" do
+  @animal = Animal.new(params)
+  @animal.update()
+  redirect to "/animals/#{@animal.id}"
+end
+
+#DESTROY
+post "/animals/:id/delete" do
+  @animal = Adopter.find(params[:id])
+  @animal.delete()
+  redirect to ("/animals")
+end

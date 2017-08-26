@@ -9,5 +9,16 @@
   <p>Status: <%= @animal.is_adoptable %></p>
   <p>Adopter: <%= @animal.adopter_id %></p>
   <p>Adoption Date: <%= @animal.adoption_date %></p>
+</div>
+
+
+<div class="buttons">
+  <form action="/animals/<%= @animal.id %>/edit" method="GET">
+    <input type="submit" id="Update animal details" value="Update Details">
+  </form>
+
+  <form action="/animals/<%= @animal.id %>/delete" method="POST">
+    <input type="submit" id="delete" value="Remove Animal" />
+  </form>
 
 </div>

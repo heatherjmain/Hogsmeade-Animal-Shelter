@@ -39,11 +39,26 @@ class Adopter
   def self.find(id)
     sql = "SELECT * FROM adopters WHERE ID = $1;"
     values = [id]
-    adopters = SqlRunner.run(sql, values).first()
-    return Adopter.new(adopters)
+    adopter = SqlRunner.run(sql, values).first()
+    return Adopter.new(adopter)
   end
 
-  
+  def update()
+    sql = "
+    UPDATE adopters
+    SET (first_name, last_name, address, postcode, tel_num, ready_to_adopt)
+    = ($1, $2, $3, $4, $5, $6)
+    WHERE ID = $7;
+    "
+    values = [@first_name, @last_name, @address, @postcode, @tel_num, @ready_to_adopt, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  def delete()
+    sql = "DELETE FROM adopters WHERE id = $1;"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
 
 
 
