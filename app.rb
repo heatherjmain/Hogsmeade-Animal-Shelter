@@ -5,6 +5,6 @@ require_relative("controllers/adopters_controller")
 
 
 #INDEX
-# get "/" do
-#   erb(:index)
-# end
+get "/" do
+  erb(:index)
+end

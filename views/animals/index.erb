@@ -1,21 +1,28 @@
 <h1>Animals</h1>
 
 
-<% for animal in @animals %>
+<table>
 
-  <div class="index">
-    <a href="/animals/<%= animal.id %>"><%= animal.name %></a>
-  </div>
+  <% for animal in @animals %>
+  <tr>
+      <td><a href="/animals/<%= animal.id %>"><%= animal.name %></a></td>
+  </tr>
+    <% end %>
 
-<% end %>
+</table>
+
+
 
 <br>
 <br>
 
 
+<div class="buttons">
 <!-- Button to add new animal -->
-<form class="add-animal" action="animals/new" method="GET">
+  <form class="add-animal" action="animals/new" method="GET">
 
-  <input type="submit" value="Register a new animal">
+    <input type="submit" value="Register a new animal">
 
-</form>
+  </form>
+
+</div>
