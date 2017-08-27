@@ -6,7 +6,7 @@ class Animal
   attr_reader(:id)
 
   def initialize(animal_details)
-    @id = animal_details["id"]
+    @id = animal_details["id"].to_i() if animal_details["id"]
     @name = animal_details["name"]
     @age = animal_details["age"]
     @species = animal_details["species"]
@@ -57,7 +57,7 @@ class Animal
 
   def delete()
     sql = "DELETE FROM animals WHERE id = $1;"
-    values = ["id"]
+    values = [@id]
     SqlRunner.run(sql, values)
   end
 

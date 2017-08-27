@@ -8,3 +8,7 @@ require_relative("controllers/adopters_controller")
 get "/" do
   erb(:index)
 end
+
+get "/home" do
+  erb(:home)
+end

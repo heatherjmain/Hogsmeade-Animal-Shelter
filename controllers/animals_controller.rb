@@ -42,7 +42,7 @@ end
 
 #DESTROY
 post "/animals/:id/delete" do
-  @animal = Adopter.find(params[:id])
+  @animal = Animal.find(params["id"])
   @animal.delete()
   redirect to ("/animals")
 end

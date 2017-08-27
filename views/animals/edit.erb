@@ -1,59 +1,59 @@
 <h1>Update animal details</h1>
 
-<form class="add-animal" action="/animals/<%= @animal.id %>" method="POST">
+<form class="update-animal" action="/animals/<%= @animal.id %>" method="POST">
 
   <label for="photo-field">Photo:</label>
-  <input type="file" name="photo" id="photo-field" value="<%= @animal.photo %>" />
+    <input type="file" name="photo" id="photo-field" value="<%= @animal.photo %>" />
 
   <br>
   <br>
 
   <label for="name-field">Name:</label>
-  <input type="text" name="name" id="name_field" value="<%= @animal.name %>" />
+    <input type="text" name="name" id="name_field" value="<%= @animal.name %>" />
 
   <br>
   <br>
 
   <label for="age-field">Age:</label>
-  <input type="text" name="age" id="age-field" value="<%= @animal.age %>" />
+    <input type="number" name="age" id="age-field" value="<%= @animal.age %>" />
 
   <br>
   <br>
 
   <label for="species-field">Species:</label>
-  <input type="text" name="species" id="species-field" value="<%= @animal.species %>" />
+    <input type="text" name="species" id="species-field" value="<%= @animal.species %>" />
 
   <br>
   <br>
 
   <label for="admission_date-field">Admission date:</label>
-  <input type="date" name="admission_date" id="admission_date-field" value="<%= @animal.admission_date %>" />
+    <input type="date" name="admission_date" id="admission_date-field" value="<%= @animal.admission_date %>" />
 
   <br>
   <br>
 
   <label for="is_adoptable-select">Status of animal:</label>
-  <select id="is_adoptable-select" name="is_adoptable">
-    <option <%= "selected" if @animal.is_adoptable == "Health Check in progress" %> value="Health Check in progress">Health Check in progress</option>
+    <select id="is_adoptable-select" name="is_adoptable">
+      <option value="Health Check in progress">Health Check in progress</option>
 
-    <option <%= "selected" if @animal.is_adoptable == "In training" %> value="In training">In training</option>
+      <option value="In training">In training</option>
 
-    <option <%= "selected" if @animal.is_adoptable == "Available for Adoptiong" %> value="Available for Adoption">Available for Adoption</option>
+      <option value="Available for Adoption">Available for Adoption</option>
 
-    <option <%= "selected" if @animal.is_adoptable == "Other" %> value="Other">Other</option>
-  </select>
+      <option value="Other">Other</option>
+    </select>
 
   <br>
   <br>
 
   <label for="adopter_id-field">Adopted by:</label>
-  <input type="text" name="adopter_id" id="adopter_id-field" value="<%= @animal.adopter_id %>" />
+    <input type="number" name="adopter_id" id="adopter_id-field" value="" />
 
   <br>
   <br>
 
   <label for="adoption_date-field">Adoption date:</label>
-  <input type="date" id="adoption_date-field" value="<%= @animal.adoption_date %>" />
+    <input type="date" name="adoption_date" id="adoption_date-field" value="" />
 
   <br>
   <br>

@@ -1,0 +1,24 @@
+input[type="submit"] {
+  text-transform: uppercase;
+  font-family: 'Josefin Slab', serif;
+  color: brown;
+  font-size: 30px;
+}
+
+select {
+  width: 250px;
+  padding: 5px, 35px, 5px, 5px;
+  margin: 15px, 0px;
+  font-size: 20px;
+  -webkit-appearance: none;
+  background: url("/images/unicorn_logo.png") 96% / 15% no repeat papayawhip;
+  font-family: "Josefin Slab", serif;
+  border: 1px solid #eee;
+  display: block;
+}
+
+label {
+  color: gold;
+  font-family: 'Josefin Slab', serif;
+  font-size: 30px;
+}
