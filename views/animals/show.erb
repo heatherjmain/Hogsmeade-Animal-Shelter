@@ -1,28 +1,31 @@
-<h1>Animal</h1>
+<h1><%= @animal.name %></h1>
 
-<div class="details">
-  <p><%= @animal.photo %></p>
-  <p>Name: <%= @animal.name %></p>
-  <p>Age: <%= @animal.age %></p>
-  <p>Species: <%= @animal.species %></p>
-  <p>Admission Date: <%= @animal.admission_date %></p>
-  <p>Status: <%= @animal.is_adoptable %></p>
-  <p>Adopter: <%= @animal.adopter_id %></p>
-  <p>Adoption Date: <%= @animal.adoption_date %></p>
-</div>
+<form>
+
+  <div class="details">
+    <p><%= @animal.photo %></p>
+    <p>Age: <%= @animal.age %></p>
+    <p>Species: <%= @animal.species %></p>
+    <p>Admission Date: <%= @animal.admission_date %></p>
+    <p>Status: <%= @animal.is_adoptable %></p>
+    <p>Adopter: <%= @animal.adopter_id %></p>
+    <p>Adoption Date: <%= @animal.adoption_date %></p>
+  </div>
+
+</form>
 
 
 <div class="buttons">
-  <form action="/animals/<%= @animal.id %>/edit" method="GET">
-    <input type="submit" id="Update-animal-details" value="Update Details" />
-  </form>
 
-  <form action="/animals/<%= @animal.id %>/delete" method="POST">
+  <a href="/animals/<%= @animal.id %>/edit">
+    <input type="submit" id="Update-animal-details" value="Update Details" /></a>
+
+  <form class="delete" action="/animals/<%= @animal.id %>/delete" method="POST">
     <input type="submit" id="delete" value="Remove Animal" />
   </form>
 
-  <form action="/animals" method="GET">
-    <input type="submit" id="back_to_all_animals" value="Back To All Animals" />
-  </form>
+  <a href="/animals">
+    <input type="submit" id="back_to_all_animals" value="Back To All Animals" /></a>
+
 
 </div>

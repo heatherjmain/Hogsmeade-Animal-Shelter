@@ -3,36 +3,42 @@
 <form class="update-adopter" action="/adopters/<%= @adopter.id %>" method="POST">
 
   <label for="first_name-field">First Name:</label>
+  <br>
   <input type="text" name="first_name" id="first_name-field" value="<%= @adopter.first_name %>" />
 
   <br>
   <br>
 
   <label for="last_name-field">Surname:</label>
+  <br>
   <input type="text" name="last_name" id="last_name-field" value="<%= @adopter.last_name %>" />
 
   <br>
   <br>
 
   <label for="address-field">Address:</label>
+  <br>
   <input type="text" name="address" id="address-field" value="<%= @adopter.address %>" />
 
   <br>
   <br>
 
   <label for="postcode-field">Postcode:</label>
+  <br>
   <input type="text" name="postcode" id="postcode-field" value="<%= @adopter.postcode %>" />
 
   <br>
   <br>
 
   <label for="tel_num-field">Tel number:</label>
+  <br>
   <input type="text" name="tel_num" id="tel_num-field" value="<%= @adopter.tel_num %>" />
 
   <br>
   <br>
 
   <label for="ready_to_adopt">Would like to adopt an animal:</label>
+  <br>
   <select id="ready_to_adopt" name="ready_to_adopt">
     <option <%= "selected" if @adopter.ready_to_adopt == "No" %>  value="No">No</option>
 

@@ -2,46 +2,53 @@
 
 <form class="add-animal" action="/animals" method="POST">
 
+
   <label for="photo-field">Photo:</label>
+  <br>
   <input type="file" name="photo" id="photo-field" value="">
 
   <br>
   <br>
 
   <label for="name-field">Name:</label>
+  <br>
   <input type="text" name="name" id="name_field" value="">
 
   <br>
   <br>
 
   <label for="age-field">Age:</label>
+  <br>
   <input type="number" name="age" id="age-field" value="">
 
   <br>
   <br>
 
   <label for="species-field">Species:</label>
+  <br>
   <input type="text" name="species" id="species-field" value="">
 
   <br>
   <br>
 
   <label for="admission_date-field">Admission date:</label>
-  <input type="date" name="admission_date" id="admission_date-field" value="">
+  <br>
+  <input type="date" name="admission_date" id="admission_date-field" value="2017-01-01">
 
   <br>
   <br>
 
   <label for="is_adoptable-select">Status of animal:</label>
-  <select id="is_adoptable-select" name="is_adoptable">
-    <option value="Health Check in progress">Health Check in progress</option>
+  <br>
+    <select id="is_adoptable-select" name="is_adoptable">
+      <option value="Health Check in progress">Health Check in progress</option>
 
     <!-- <option value="In training">In training</option>
 
     <option value="Available for Adoption">Available for Adoption</option> -->
 
-    <option value="Other">Other</option>
-  </select>
+      <option value="Other">Other</option>
+    </select>
 
   <!-- <label for="adopter_id-field">Adopted by:</label>
   <input type="text" name="adopter_id" id="adopter_id-field" value="">
@@ -52,5 +59,6 @@
   <br><br>
 
   <input type="submit" name="submit" id="add-animal" value="Register animal">
+
 
 </form>
