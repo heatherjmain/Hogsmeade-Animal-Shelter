@@ -60,6 +60,10 @@ class Adopter
     SqlRunner.run(sql, values)
   end
 
+  def name()
+    return "#{@first_name} #{@last_name}"
+  end
+
 
 
 end

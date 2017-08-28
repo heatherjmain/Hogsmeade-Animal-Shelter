@@ -5,13 +5,27 @@
 
   <% for animal in @animals %>
 
-    <tr>
+    <div>
+
+      <tr>
         <td><a href="/animals/<%= animal.id %>"><%= animal.name %></a></td>
-    </tr>
+      </tr>
+
+      <tr>
+        <td>Admission Date: <%= animal.admission_date %></td>
+      </tr>
+
+      <tr>
+        <td><br><br></td>
+      </tr>
+    </div>
 
   <% end %>
 
+
 </table>
+
+
 
 
 

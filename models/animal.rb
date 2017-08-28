@@ -61,4 +61,11 @@ class Animal
     SqlRunner.run(sql, values)
   end
 
+  def find_adopter()
+    sql = "SELECT * FROM adopters WHERE id = $1"
+    values = [@adopter_id]
+    adopter = SqlRunner.run(sql, values)
+    return Adopter.new(adopter.first)
+  end
+
 end

@@ -20,6 +20,6 @@ CREATE TABLE animals (
   admission_date DATE,
   is_adoptable VARCHAR(255),
   photo VARCHAR(255),
-  adopter_id INT REFERENCES adopters(id) ON DELETE CASCADE,
+  adopter_id INT REFERENCES adopters(id) ON DELETE CASCADE DEFAULT NULL,
   adoption_date DATE DEFAULT NULL
 );

@@ -9,12 +9,14 @@
     <p>Ready to adopt?: <%= @adopter.ready_to_adopt %></p>
   </div>
 
+
 </form>
 
+<br>
 
-<div class="buttons">
+<div class="button">
 
-  <a href="/adopters/<%= @adopter.id %>/edit">
+  <a href="/adopters/<%= @adopter.id %>/edit" class="button">
     <input type="submit" id="update_adopter_details" value="Update Details" />
   </a>
 

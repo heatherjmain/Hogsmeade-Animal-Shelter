@@ -39,7 +39,7 @@ animal1 = Animal.new({
   "species" => "cat",
   "admission_date" => "2016-10-14",
   "is_adoptable" => "Health Check",
-  "photo" => "url",
+  "photo" => "buckbeak.jpg",
   "adopter_id" => adopter1.id,
   "adoption_date" => nil
   })
@@ -51,7 +51,7 @@ animal2 = Animal.new({
   "species" => "turtle",
   "admission_date" => "2017-05-03",
   "is_adoptable" => "In Training",
-  "photo" => "url",
+  "photo" => "buckbeak.jpg",
   "adopter_id" => adopter2.id,
   "adoption_date" => "2017-06-01",
   })
@@ -63,7 +63,7 @@ animal3 = Animal.new({
   "species" => "cat",
   "admission_date" => "2017-08-02",
   "is_adoptable" => "Available for Adoption",
-  "photo" => "url",
+  "photo" => "buckbeak.jpg",
   "adopter_id" => adopter3.id,
   "adoption_date" => "2017-08-03"
   })
@@ -75,7 +75,7 @@ animal3.save()
     "species" => "dog",
     "admission_date" => "2017-07-02",
     "is_adoptable" => "Other",
-    "photo" => "url",
+    "photo" => "buckbeak.jpg",
     "adopter_id" => adopter3.id,
     "adoption_date" => "2017-07-02  "
     })

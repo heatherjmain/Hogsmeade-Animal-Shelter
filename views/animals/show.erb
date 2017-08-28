@@ -8,11 +8,15 @@
     <p>Species: <%= @animal.species %></p>
     <p>Admission Date: <%= @animal.admission_date %></p>
     <p>Status: <%= @animal.is_adoptable %></p>
-    <p>Adopter: <%= @animal.adopter_id %></p>
+    <p>Adopter: <%= @animal.find_adopter.name %></p>
     <p>Adoption Date: <%= @animal.adoption_date %></p>
   </div>
 
+  <br>
+
 </form>
+
+<br>
 
 
 <div class="buttons">

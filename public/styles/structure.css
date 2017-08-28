@@ -1,5 +1,6 @@
 body {
   background: url("/images/background2.jpeg");
+  background-color: black;
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 15px;
@@ -15,7 +16,8 @@ h1, h2 {
 
 h1 {
   font-family: 'Allura', cursive;
-  font-size: 60px;
+  font-size: 70px;
+  text-shadow: #6f269b 3px 3px;
 }
 
 .details {
@@ -35,4 +37,12 @@ a {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-right: 550px;
+}
+
+ul {
+  display: inline-flex;
+}
+
+li {
+  margin-right: 80px;"
 }

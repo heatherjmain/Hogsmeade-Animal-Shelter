@@ -1,3 +1,26 @@
-buttons {
-  align-content: center;
+  .button {
+	-moz-box-shadow: 3px 3px 5px 0px #986ac1;
+	-webkit-box-shadow: 3px 3px 5px 0px #986ac1;
+	box-shadow: 3px 3px 5px 0px #986ac1;
+	background-color:transparent;
+	-moz-border-radius:17px;
+	-webkit-border-radius:17px;
+	border-radius:17px;
+	border:1px solid #1766d6;
+	display:inline-block;
+	cursor:pointer;
+	color:#1766d6;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #986ac1;
+}
+.button:hover {
+	background-color:transparent;
+}
+.button:active {
+	position:relative;
+	top:1px;
 }
