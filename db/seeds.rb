@@ -39,7 +39,7 @@ animal1 = Animal.new({
   "species" => "cat",
   "admission_date" => "2016-10-14",
   "is_adoptable" => "Health Check",
-  "photo" => "buckbeak.jpg",
+  "photo" => "/buckbeak.jpg",
   "adopter_id" => adopter1.id,
   "adoption_date" => nil
   })

@@ -4,7 +4,16 @@ form {
   padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-right: 550px;
+  margin-right: 600px;
+}
+
+.details-form {
+  border: #1766d6 solid 2px;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 800px;
 }
 
 .delete {

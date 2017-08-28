@@ -30,6 +30,7 @@ end
 #EDIT
 get "/animals/:id/edit" do
   @animal = Animal.find(params["id"])
+  @adopters = Adopter.all()
   erb(:"animals/edit")
 end
 

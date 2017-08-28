@@ -1,5 +1,5 @@
 body {
-  background: url("/images/background2.jpeg");
+  background: url("/images/background3.jpeg");
   background-color: black;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -36,7 +36,7 @@ a {
   padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-right: 550px;
+  margin-right: 600px;
 }
 
 ul {
@@ -45,4 +45,8 @@ ul {
 
 li {
   margin-right: 80px;"
+}
+
+.animal_img {
+  max-height: 200px;
 }

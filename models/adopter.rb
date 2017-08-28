@@ -65,5 +65,4 @@ class Adopter
   end
 
 
-
 end

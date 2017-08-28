@@ -3,36 +3,42 @@
 <form class="update-animal" action="/animals/<%= @animal.id %>" method="POST">
 
   <label for="photo-field">Photo:</label>
+  <br>
     <input type="file" name="photo" id="photo-field" value="<%= @animal.photo %>" />
 
   <br>
   <br>
 
   <label for="name-field">Name:</label>
+  <br>
     <input type="text" name="name" id="name_field" value="<%= @animal.name %>" />
 
   <br>
   <br>
 
   <label for="age-field">Age:</label>
+  <br>
     <input type="number" name="age" id="age-field" value="<%= @animal.age %>" />
 
   <br>
   <br>
 
   <label for="species-field">Species:</label>
+  <br>
     <input type="text" name="species" id="species-field" value="<%= @animal.species %>" />
 
   <br>
   <br>
 
   <label for="admission_date-field">Admission date:</label>
+  <br>
     <input type="date" name="admission_date" id="admission_date-field" value="<%= @animal.admission_date %>" />
 
   <br>
   <br>
 
   <label for="is_adoptable-select">Status of animal:</label>
+  <br>
     <select id="is_adoptable-select" name="is_adoptable">
       <option value="Health Check in progress">Health Check in progress</option>
 
@@ -48,14 +54,29 @@
   <br>
   <br>
 
-  <label for="adopter_id-field">Adopted by:</label>
-    <input type="number" name="adopter_id" id="adopter_id-field" value="nil" />
+  <% if @animal.is_adoptable == "Successfully Adopted" %>
+
+      <label for="adopter-select">Select Adopter:</label>
+      <select name="adopter_id" id="adopter_select" selected="<%= @animal.adopter_id  %>">
+        <% @adopters.each() do |adopter| %>
+          <% if adopter.ready_to_adopt == "Yes" %>
+
+            <% if adopter.id == @animal.adopter_id %>
+            <option value=<%= adopter.id %> selected><%= adopter.name %></option>
+            <% else %>
+              <option value=<%= adopter.id %>><%= adopter.name %></option>
+            <% end %>
+          <% end %>
+        <% end %>
+      </select>
 
   <br>
   <br>
 
-  <label for="adoption_date-field">Adoption date:</label>
-    <input type="date" name="adoption_date" id="adoption_date-field" value="nil" />
+    <label for="adoption_date-field">Adoption date:</label>
+    <br>
+      <input type="date" name="adoption_date" id="adoption_date-field" value="nil" />
+  <% end %>
 
   <br>
   <br>

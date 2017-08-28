@@ -1,18 +1,24 @@
 <h1><%= @animal.name %></h1>
 
-<form>
+
+
+
+
+<form class="details-form">
 
   <div class="details">
-    <p><%= @animal.photo %></p>
+
+    <img class="animal_img" src="../images/<%= @animal.photo %>" alt="">
+
     <p>Age: <%= @animal.age %></p>
     <p>Species: <%= @animal.species %></p>
     <p>Admission Date: <%= @animal.admission_date %></p>
     <p>Status: <%= @animal.is_adoptable %></p>
-    <p>Adopter: <%= @animal.find_adopter.name %></p>
-    <p>Adoption Date: <%= @animal.adoption_date %></p>
+    <% if !@animal.adopter_id.nil? %>
+      <p>Adopter: <%= @animal.find_adopter.name %></p>
+      <p>Adoption Date: <%= @animal.adoption_date %></p>
+    <% end %>
   </div>
-
-  <br>
 
 </form>
 
@@ -20,6 +26,14 @@
 
 
 <div class="buttons">
+
+
+  <% if @animal.is_adoptable == "Successfully Adopted" %>
+    <a href="/animals/<%= @animal.id %>/edit">
+      <input type="submit" id="Add Adopter" value="Add Adopter" /></a>
+  <% end %>
+
+  <br>
 
   <a href="/animals/<%= @animal.id %>/edit">
     <input type="submit" id="Update-animal-details" value="Update Details" /></a>
