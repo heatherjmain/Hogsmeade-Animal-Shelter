@@ -1,18 +1,46 @@
-td, th {
-  text-align: left;
+/*formats animal index*/
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.cell {
+  flex: 1;
+  border: #1766d6 solid 2px;
+  padding: 10px;
+  min-width: 200px;
+  max-width: 200px;
+  color: #1766d6;
+  text-align: center;
+}
+
+.cell img {
+  max-width: 100%;
+}
+
+.cell h3 {
   font-family: 'Josefin Slab', serif;
   color: #1766d6;
+  font-size: 35px;
+  line-height: 10px
+}
+
+.cell p {
+  font-family: 'Josefin Slab', serif;
+  color: #1766d6;
+  line-height: 10px;
   font-size: 20px;
 }
 
-td {
-  padding: 10px, 20px, 0px, 0px;
-}
-
-th {
-  padding: 0px, 20px, 10px, 0px;
-}
-
-table {
-  border-collapse: collapse;
+.menu-cell {
+  flex: 1;
+  border: #1766d6 solid 2px;
+  padding: 10px;
+  min-width: 200px;
+  max-width: 400px;
+  color: #1766d6;
+  text-align: center;
 }

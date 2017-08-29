@@ -1,21 +1,25 @@
+/*puts box round register new forms*/
 form {
   border: #1766d6 solid 2px;
   text-align: left;
   padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-right: 600px;
+  margin-right: 770px;
+  border-radius:17px;
 }
 
+/*formats box on single view*/
 .details-form {
   border: #1766d6 solid 2px;
-  text-align: left;
+  text-align: center;
   padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-right: 800px;
 }
 
+/*formats the delete button on single view*/
 .delete {
   border: 0px;
   text-align: none;
@@ -25,14 +29,19 @@ form {
   margin-right: 0px;
 }
 
-input[type="submit"] {
+/*styles buttons????*/
+/*input {
   text-transform: uppercase;
   font-family: 'Josefin Slab', serif;
   color: #1766d6;
-  font-size: 20px;
-}
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: purple;
+  padding: 10px;
+  border-radius: 15px;
+}*/
 
-select {
+/*select {
   width: 250px;
   padding: 5px, 35px, 5px, 5px;
   margin: 15px, 0px;
@@ -42,10 +51,16 @@ select {
   font-family: "Josefin Slab", serif;
   border: 1px solid #eee;
   display: block;
-}
+}*/
 
+
+/*making the labels on adopter list blue*/
 label {
   color: #1766d6;
   font-family: 'Josefin Slab', serif;
   font-size: 20px;
 }
+
+/*.object-border {
+  border: #1766d6 solid 2px;
+}*/

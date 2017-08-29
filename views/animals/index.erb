@@ -1,29 +1,25 @@
 <h1>Animals</h1>
 
 
-<table>
+<div class="grid">
+
+  <div class="grid-row">
 
   <% for animal in @animals %>
 
-    <div>
 
-      <tr>
-        <td><a href="/animals/<%= animal.id %>"><%= animal.name %></a></td>
-      </tr>
+        <div class="cell">
+          <img class="index_img" src="../images/<%= animal.photo %>" alt="">
 
-      <tr>
-        <td>Admission Date: <%= animal.admission_date %></td>
-      </tr>
+          <h3><a href="/animals/<%= animal.id %>"><%= animal.name %></a></h3>
 
-      <tr>
-        <td><br><br></td>
-      </tr>
-    </div>
+          <p>Registered: <%= animal.admission_date %></p>
+        </div>
+
 
   <% end %>
-
-
-</table>
+</div>
+</div>
 
 
 
@@ -35,7 +31,7 @@
 
 <div class="buttons">
 <!-- Button to add new animal -->
-  <form class="add-animal" action="animals/new" method="GET">
+  <form class="" action="animals/new" method="GET">
     <input type="submit" value="Register a new animal">
 
   </form>

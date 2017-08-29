@@ -1,11 +1,13 @@
+/*formats background image*/
 body {
-  background: url("/images/background3.jpeg");
+  background: url("/images/background.jpeg");
   background-color: black;
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 15px;
   margin: 10px;
 }
+
 
 h1, h2 {
   font-family: 'Josefin Slab', serif;
@@ -20,33 +22,50 @@ h1 {
   text-shadow: #6f269b 3px 3px;
 }
 
+/*formats details in single view*/
 .details {
   font-family: 'Josefin Slab', serif;
   color: #1766d6;
   line-height: 10px;
 }
 
+/*formats words that are links*/
 a {
   color: #996ac1;
+  text-decoration: none;
+  font-family: 'Josefin Slab', serif;
 }
 
+/*formats box round menu*/
 .menu {
   border: #1766d6 solid 2px;
   text-align: left;
   padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-right: 600px;
+  margin-right: 800px;
 }
 
+/*makes nav bar items on same line*/
 ul {
   display: inline-flex;
 }
 
+/*spces nav bar items along the row*/
 li {
   margin-right: 80px;"
 }
 
-.animal_img {
-  max-height: 200px;
+/*formats single view image*/
+.show_img {
+  width: 430px;
+}
+
+/*formats multi view img*/
+.index_img {
+  height: 150px;
+}
+
+.main-menu {
+  margin-left: 12%;
 }

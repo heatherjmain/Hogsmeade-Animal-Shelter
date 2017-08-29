@@ -31,6 +31,13 @@ end
 get "/animals/:id/edit" do
   @animal = Animal.find(params["id"])
   @adopters = Adopter.all()
+  @is_adoptable_values = [
+    "Health Check in progress",
+    "In training",
+    "Available for Adoption",
+    "Successfully Adopted",
+    "Other"
+  ]
   erb(:"animals/edit")
 end
 

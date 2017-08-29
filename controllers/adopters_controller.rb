@@ -17,6 +17,7 @@ end
 #SHOW
 get "/adopters/:id" do
   @adopter = Adopter.find(params["id"])
+  @animals = @adopter.animals_adopted
   erb(:"adopters/show")
 end
 

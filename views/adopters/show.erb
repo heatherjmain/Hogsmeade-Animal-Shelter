@@ -7,16 +7,31 @@
     <p>Postcode: <%= @adopter.postcode %></p>
     <p>Tel number: <%= @adopter.tel_num %></p>
     <p>Ready to adopt?: <%= @adopter.ready_to_adopt %></p>
-  </div>
 
+    <p>
+      Animals adopted:
+      <ul>
+        <% @animals.each do |animal| %>
+          <li><a href="/animals/<%= animal.id %>"><%= animal.name %></a></li>
+        <% end %>
+      </ul>
+    </p>
+
+
+
+
+
+
+
+  </div>
 
 </form>
 
 <br>
 
-<div class="button">
+<div>
 
-  <a href="/adopters/<%= @adopter.id %>/edit" class="button">
+  <a href="/adopters/<%= @adopter.id %>/edit" class="buttons">
     <input type="submit" id="update_adopter_details" value="Update Details" />
   </a>
 

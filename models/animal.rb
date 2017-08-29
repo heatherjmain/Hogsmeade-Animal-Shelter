@@ -13,7 +13,7 @@ class Animal
     @admission_date = animal_details["admission_date"]
     @is_adoptable = animal_details["is_adoptable"]
     @photo = animal_details["photo"]
-    @adopter_id = animal_details["adopter_id"]
+    @adopter_id = animal_details["adopter_id"].to_i() if animal_details["adopter_id"]
     @adoption_date = animal_details["adoption_date"]
   end
 

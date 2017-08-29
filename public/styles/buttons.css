@@ -1,4 +1,6 @@
-  .button {
+/*doesn't work!!!!*/
+
+input {
 	-moz-box-shadow: 3px 3px 5px 0px #986ac1;
 	-webkit-box-shadow: 3px 3px 5px 0px #986ac1;
 	box-shadow: 3px 3px 5px 0px #986ac1;
@@ -16,11 +18,11 @@
 	padding:7px 25px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #986ac1;
+  margin-bottom: 10px;
 }
-.button:hover {
-	background-color:transparent;
-}
-.button:active {
+input:hover {
+	background-color:white;
+}input:active {
 	position:relative;
 	top:1px;
 }

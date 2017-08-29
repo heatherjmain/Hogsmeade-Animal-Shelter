@@ -64,5 +64,12 @@ class Adopter
     return "#{@first_name} #{@last_name}"
   end
 
+  def animals_adopted()
+    sql = "SELECT * FROM animals WHERE adopter_id = $1"
+    values = [@id]
+    animal = SqlRunner.run(sql, values)
+    return animal.map { |animal| Animal.new(animal)}
+  end
+
 
 end

@@ -40,15 +40,12 @@
   <label for="is_adoptable-select">Status of animal:</label>
   <br>
     <select id="is_adoptable-select" name="is_adoptable">
-      <option value="Health Check in progress">Health Check in progress</option>
-
-      <option value="In training">In training</option>
-
-      <option value="Available for Adoption">Available for Adoption</option>
-
-      <option value="Successfully Adopted">Successfully Adopted</option>
-
-      <option value="Other">Other</option>
+      <% @is_adoptable_values.each do |value| %>
+        <option value="<%= value %>"
+            <%= @animal.is_adoptable == value ? "selected" : "" %>>
+          <%= value %>
+        </option>
+      <% end %>
     </select>
 
   <br>
@@ -60,12 +57,10 @@
       <select name="adopter_id" id="adopter_select" selected="<%= @animal.adopter_id  %>">
         <% @adopters.each() do |adopter| %>
           <% if adopter.ready_to_adopt == "Yes" %>
-
-            <% if adopter.id == @animal.adopter_id %>
-            <option value=<%= adopter.id %> selected><%= adopter.name %></option>
-            <% else %>
-              <option value=<%= adopter.id %>><%= adopter.name %></option>
-            <% end %>
+            <option value=<%= adopter.id %>
+                <%= adopter.id == @animal.adopter_id ? "selected" : "" %>>
+              <%= adopter.name %>
+            </option>
           <% end %>
         <% end %>
       </select>
@@ -75,7 +70,7 @@
 
     <label for="adoption_date-field">Adoption date:</label>
     <br>
-      <input type="date" name="adoption_date" id="adoption_date-field" value="nil" />
+      <input type="date" name="adoption_date" id="adoption_date-field" value="<%= @animal.adoption_date %>" />
   <% end %>
 
   <br>

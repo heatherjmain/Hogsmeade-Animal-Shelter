@@ -8,7 +8,7 @@
 
   <div class="details">
 
-    <img class="animal_img" src="../images/<%= @animal.photo %>" alt="">
+    <img class="show_img" src="../images/<%= @animal.photo %>" alt="">
 
     <p>Age: <%= @animal.age %></p>
     <p>Species: <%= @animal.species %></p>
@@ -25,12 +25,12 @@
 <br>
 
 
-<div class="buttons">
+<div>
 
 
   <% if @animal.is_adoptable == "Successfully Adopted" %>
     <a href="/animals/<%= @animal.id %>/edit">
-      <input type="submit" id="Add Adopter" value="Add Adopter" /></a>
+      <input class="button" type="submit" id="Add Adopter" value="Add Adopter" /></a>
   <% end %>
 
   <br>
