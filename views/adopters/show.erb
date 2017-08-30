@@ -3,18 +3,39 @@
 <form>
 
   <div class="details">
-    <p>Address: <%= @adopter.address %></p>
-    <p>Postcode: <%= @adopter.postcode %></p>
-    <p>Tel number: <%= @adopter.tel_num %></p>
-    <p>Ready to adopt?: <%= @adopter.ready_to_adopt %></p>
+    <p>Address:</p>
+    <p class="purple"><%= @adopter.address %></p>
+
+    <br>
+
+    <p>Postcode:</p>
+    <p class="purple"><%= @adopter.postcode %></p>
+
+    <br>
+
+    <p>Tel number:</p>
+    <p class="purple"><%= @adopter.tel_num %></p>
+
+    <br>
+
+    <p>Ready to adopt?:</p>
+    <p class="purple"><%= @adopter.ready_to_adopt %></p>
+
+    <br>
 
     <p>
       Animals adopted:
+
       <ul>
+
         <% @animals.each do |animal| %>
+
           <li><a href="/animals/<%= animal.id %>"><%= animal.name %></a></li>
+
         <% end %>
+
       </ul>
+
     </p>
 
 

@@ -1,26 +1,47 @@
 <h1><%= @animal.name %></h1>
 
 
+<div class="grid-show">
+  <div class="grid-row-show">
 
 
 
-<form class="details-form">
+      <div class="cell-show">
 
-  <div class="details">
+      <div class="details">
 
-    <img class="show_img" src="../images/<%= @animal.photo %>" alt="">
+        <img class="show_img" src="../images/<%= @animal.photo %>" alt="">
 
-    <p>Age: <%= @animal.age %></p>
-    <p>Species: <%= @animal.species %></p>
-    <p>Admission Date: <%= @animal.admission_date %></p>
-    <p>Status: <%= @animal.is_adoptable %></p>
+        <p>Age: <div class="purple"><%= @animal.age %></div></p>
+
+        <br>
+
+        <p>Species: <div class="purple"><%= @animal.species %></div></p>
+
+        <br>
+
+        <p>Admission Date: <div class="purple"><%= @animal.admission_date %></div></p>
+
+        <br>
+
+        <p>Status: <div class="purple"><%= @animal.is_adoptable %></div></p>
+
+        <br>
+
     <% if !@animal.adopter_id.nil? %>
-      <p>Adopter: <%= @animal.find_adopter.name %></p>
-      <p>Adoption Date: <%= @animal.adoption_date %></p>
-    <% end %>
-  </div>
+        <p>Adopter: <div class="purple"><%= @animal.find_adopter.name %></div></p>
 
-</form>
+        <br>
+
+        <p>Adoption Date: <div class="purple"><%= @animal.adoption_date %></div></p>
+        <% end %>
+      </div>
+
+</div>
+</div>
+</div>
+
+
 
 <br>
 

@@ -20,6 +20,15 @@ h1 {
   font-family: 'Allura', cursive;
   font-size: 70px;
   text-shadow: #6f269b 3px 3px;
+  color:black;
+}
+
+.main-menu {
+  font-size: 60px;
+}
+
+.sub-title {
+  color: #6f269b;
 }
 
 /*formats details in single view*/
@@ -66,6 +75,6 @@ li {
   height: 150px;
 }
 
-.main-menu {
-  margin-left: 12%;
+.purple {
+  color: #996ac1;
 }

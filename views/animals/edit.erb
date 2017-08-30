@@ -59,7 +59,7 @@
           <% if adopter.ready_to_adopt == "Yes" %>
             <option value=<%= adopter.id %>
                 <%= adopter.id == @animal.adopter_id ? "selected" : "" %>>
-              <%= adopter.name %>
+              <a href="/adopters/<%= adopter.id %>"><%= adopter.name %></a>
             </option>
           <% end %>
         <% end %>
